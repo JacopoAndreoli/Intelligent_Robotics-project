@@ -1,0 +1,5 @@
+int32[] object_id  # target/obstacles id ordered
+geometry_msgs/PoseWithCovarianceStamped[] object_pose  # [x y z xquat yquat zquat wquat] pose of the object/obstacles to pick up ordered with the id
+int32 target_id
+---
+int32 Service_done #true or not if the picking/placing is done correctly

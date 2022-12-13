@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<launch>
+	<include file="$(find tiago_iaslab_simulation)/launch/navigation.launch" />
+	<include file="$(find tiago_iaslab_simulation)/launch/apriltag.launch" />
+
+	<node name ="human_node" pkg="tiago_iaslab_simulation" type="human_node"/>
+<!--	<node name ="obs_finder_server" pkg="tiago_obstacle_finder" type="obs_finder_server"/>	-->
+
+</launch>
+
+
+

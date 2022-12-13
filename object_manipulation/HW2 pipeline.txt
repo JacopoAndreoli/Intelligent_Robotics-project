@@ -1,0 +1,43 @@
+
+INTELLIGENT ROBOTICS - HW2 - PROJECT PIPELINE
+
+NODO A: gestisce le azioni da compiere
+NODO B: gestisce l'apriltag detection e definisce i collision objects
+NOOD C: gestisce il manipolatore
+
+
+NODO A chiama human_node  -> human node ritorna l'id dell'oggetto da prendere
+
+NODO A chiama server HW1 per movimentare tiago verso il tavolo
+quando tiago è arrivato, il server dell HW1 darà come risultato la 
+detection degli ostacoli....ce ne freghiamo, basta sapere che è arrivato
+
+NODO A chiama nodo C dicendogli di prendere l'oggetto -> NODO C 
+
+	NODO C chiama NODO B -> NODO B abbassa la testa di tiago per vedere gli 
+				oggetti, fa la detection e ritorna la posizione 			
+				dell'oggetto da prendere e i collision objects 
+				che il braccio deve evitare
+
+	NODO C prende l'oggetto seguendo le procedure nel pdf dell'hw
+
+	NODO C da il risultato al NODO A
+
+NODO A chiama il server dell'HW1 per mandare tiago ai tavolini
+usare la detection degli ostacoli, confrontare la posizione degli ostacoli
+con i colori che la camera vede in quelle posizioni in modo da definire su quale
+cilidro posizionare l'oggetto
+
+se è troppo difficile, NODO A chiede al server HW1 di portare tiago direttamente
+davanti al tavolino (quindi ci saranno 3 posizioni, e viene scelta quella definita
+dal colore dell'oggetto da prendere)
+
+NODO A chiama NODO C per dirgli di posizionare l'oggetto sul cilindro.
+
+NB 	servono due chiamate differenti tra nodo A e C: una dice di prendere l'oggetto, 
+	l'altra di lasciarlo
+
+	
+
+
+									

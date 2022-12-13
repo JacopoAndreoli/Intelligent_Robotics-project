@@ -1,0 +1,11 @@
+#goal definition
+float32 pos_x
+float32 pos_y
+float32 angle_theta
+---
+#result definition
+float32[] obs_x
+float32[] obs_y
+---
+#feedback
+int32[] state

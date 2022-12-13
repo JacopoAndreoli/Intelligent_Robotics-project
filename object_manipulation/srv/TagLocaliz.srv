@@ -1,0 +1,3 @@
+int32 object_id  # number of object to pick up
+---
+float32[] object_pose  # [x y z xquat yquat zquat wquat] pose of the object to pick up
